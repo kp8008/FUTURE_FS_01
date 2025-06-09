@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Personal portfolio of Shreeya showcasing projects, skills, and contact info." />
+  <title>Portfolio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #fff6fa;
+      color: #222;
+    }
+    header {
+      background: #fff;
+      color: #191970;
+      padding: 1.5rem 2rem 1rem 2rem;
+      text-align: left;
+      border-bottom: 1px solid #eee;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #191970;
+    }
+    nav a {
+      margin: 0 1rem;
+      color: #222;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1rem;
+      transition: color 0.2s;
+    }
+    nav a.active, nav a:hover {
+      color: #191970;
+    }
+    section {
+      padding: 2.5rem 1rem 2rem 1rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .intro {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+    .intro-text {
+      max-width: 60%;
+    }
+    .intro-title {
+      font-size: 2.2rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+    .intro-role {
+      color: #191970;
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+    .intro-btns button {
+      margin-right: 1rem;
+      padding: 0.7rem 1.5rem;
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.2s;
+    }
+    .intro-btns .hire {
+      background: #191970;
+      color: #fff;
+    }
+    .intro-btns .projects {
+      background: #222;
+      color: #fff;
+    }
+    .intro-img {
+      width: 180px;
+      height: 180px;
+      background: #4682B4;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .intro-img img {
+      width: 175px;
+      height: 179px;
+      border-radius: 50%;
+    }
+    .about-box {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(70,130,180,0.07);
+      padding: 2rem;
+      margin-top: 1rem;
+    }
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+    .skill-card {
+      background: #5F9EA0;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(70,130,180,0.07);
+      padding: 1.2rem 2rem;
+      text-align: center;
+      min-width: 110px;
+    }
+    .skill-card img {
+      width: 40px;
+      height: 40px;
+      margin-bottom: 0.5rem;
+    }
+    .projects-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .project-card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(70,130,180,0.07);
+      padding: 1.2rem 2rem;
+    }
+    .contact-form {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(70,130,180,0.07);
+      padding: 2rem;
+      max-width: 500px;
+      margin: 2rem auto 0 auto;
+    }
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      padding: 0.7rem;
+      margin: 0.7rem 0;
+      border: 1px solid #eee;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+    .contact-form button {
+      background: #191970;
+      color: #fff;
+      border: none;
+      padding: 0.8rem 2rem;
+      border-radius: 5px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 0.5rem;
+    }
+    .socials {
+      margin-top: 2rem;
+      text-align: center;
+    }
+    .socials a {
+      margin: 0 0.7rem;
+      color: #222;
+      font-size: 1.5rem;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .socials a:hover {
+      color: #191970;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #fff;
+      color: #191970;
+      border-top: 1px solid #eee;
+      margin-top: 2rem;
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <div class="logo">Portfolio</div>
+    <nav>
+      <a href="#" class="active" onclick="showSection('home')">Home</a>
+      <a href="#" onclick="showSection('about')">About</a>
+      <a href="#" onclick="showSection('skills')">Skills</a>
+      <a href="#" onclick="showSection('projects')">Projects</a>
+      <a href="#" onclick="showSection('contact')">Contact</a>
+    </nav>
+  </header>
+
+  <section id="home" class="active">
+    <div class="intro">
+      <div class="intro-text">
+        <div class="intro-title">Hyy, I'm Prince</div>
+        <div class="intro-role">Web Designer</div>
+        <p>Welcome to my personal portfolio! Explore my creative and technical journey through projects, skills, and design.</p>
+        <div class="intro-btns">
+          <button class="hire" onclick="showSection('contact')">Hire Me</button>
+          <button class="projects" onclick="showSection('projects')">Latest Projects</button>
+        </div>
+      </div>
+      <div class="intro-img">
+        <img src="https://static.vecteezy.com/system/resources/thumbnails/027/951/137/small_2x/stylish-spectacles-guy-3d-avatar-character-illustrations-png.png" />
+      </div>
+    </div>
+    <div class="socials">
+      <a href="https://www.linkedin.com/in/prince-katariya-145b8b341" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/kp8008" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+  
+    </div>
+  </section>
+
+  <section id="about" style="display:none;">
+    <h2>About Me</h2>
+    <div class="about-box">
+      <p>I'm <b>Prince Katariya</b> from gondal. I have completed my HSC from Gangotri Science and commerce School, Gondal. Currently I am persuing B.Tech in CSE at  Darshan University - Rajkot. I will graduate in 2027. My strength are i am self motivation person and i have strong communication skill, I am quick learner and good listener.My short term goal is to get a job in reputed company where i can build my career and my long term goal is to become a more responsible and knowledgable personality, that's all about me. </p>
+      <P><b>Experience :</b>I don't have any work experience because I am currently pursuing btech cse in third year at Darshan University - Rajkot.</P>
+    </div>
+  </section>
+
+  <section id="skills" style="display:none;">
+    <h2>My Skills</h2>
+    <div class="skills-list">
+      <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C" /><div>C</div></div>
+      <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" /><div>HTML</div></div>
+      <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" /><div>CSS</div></div>
+      <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" /><div>JavaScript</div></div>
+      <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" /><div>Python</div></div>
+      <div class="skill-card"><img src="data:image/png;base64,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" alt="DSA" /><div>DSA</div></div>
+      <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="java" /><div>Java</div></div>
+      <div class="skill-card"><img src="data:image/png;base64,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" alt="DBMS" /><div>DBMS</div></div>
+      <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dot-net/dot-net-original.svg" alt=".netCore"/><div>.netCore</div></div>
+      <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" /><div>GitHub</div></div>
+    </div>
+  </section>
+
+  <section id="projects" style="display:none;">
+    <h2>Projects</h2>
+    <div class="projects-list">
+      <div class="project-card">
+        <h3>Quiz Management</h3>
+        <p>A web-based Quiz Management System in ASP.NET that enables admins to create and manage quizzes</p>
+      </div>
+      <div class="project-card">
+        <h3>Address Book</h3>
+        <p>A web-based Address Book Management System in ASP.NET that  simple application that allows users to add, edit, search, and delete contact details using a user-friendly interface with backend support.</p>
+      </div>
+      <div class="project-card">
+        <h3>Task Manager</h3>
+        <p>A task management app to add, update, remove, and mark tasks complete. Built using HTML, CSS, JavaScript.</p>
+      </div>
+      <div class="project-card">
+        <h3>Personal Portfolio</h3>
+        <p>This live portfolio showcases my skills, education, and projects. Designed and coded from scratch.</p>
+      </div>
+      <div class="project-card">
+        <h3>Weather Dashboard</h3>
+        <p>The live weather dashboard displays real-time weather updates for a searched city, including temperature, humidity, wind speed, and forecast.It provides an intuitive interface with dynamic visuals for quick insights.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" style="display:none;">
+    <h2>Contact Me</h2>
+    <form class="contact-form" onsubmit="openGmail(event)">
+      <input type="text" id="name" placeholder="Your Name" required />
+      <input type="email" id="email" placeholder="Your Email" required />
+      <input type="text" id="contact" placeholder="Your Contact Number" required />
+      <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>Get in touch <br><b><a href="https://mail.google.com/mail/?view=cm&fs=1&to=23010101132@darshan.ac.in" target="_blank" style="color: #191970; text-decoration: none;">23010101132@darshan.ac.in</a></b> </p>
+  </footer>
+
+  <div id="contactModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 1000;">
+    <div style="background: white; width: 90%; max-width: 500px; margin: 50px auto; padding: 20px; border-radius: 10px;">
+      <h2 style="margin-top: 0;">Contact Me</h2>
+      <form id="emailForm" onsubmit="sendEmail(event)">
+        <input type="text" id="senderName" placeholder="Your Name" required style="width: 100%; padding: 8px; margin: 10px 0; border: 1px solid #ddd; border-radius: 4px;">
+        <input type="email" id="senderEmail" placeholder="Your Email" required style="width: 100%; padding: 8px; margin: 10px 0; border: 1px solid #ddd; border-radius: 4px;">
+        <textarea id="emailMessage" placeholder="Your Message" required style="width: 100%; padding: 8px; margin: 10px 0; border: 1px solid #ddd; border-radius: 4px; height: 150px;"></textarea>
+        <div style="text-align: right;">
+          <button type="button" onclick="closeContactForm()" style="padding: 8px 20px; margin-right: 10px; border: none; border-radius: 4px; background: #666; color: white; cursor: pointer;">Close</button>
+          <button type="submit" style="padding: 8px 20px; border: none; border-radius: 4px; background: #191970; color: white; cursor: pointer;">Send Email</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('section').forEach(section => {
+        section.style.display = 'none';
+      });
+      document.getElementById(id).style.display = 'block';
+      document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
+      if(id !== 'home') {
+        document.querySelector(`nav a[onclick*="${id}"]`).classList.add('active');
+      } else {
+        document.querySelector('nav a').classList.add('active');
+      }
+    }
+
+    function openGmail(event) {
+      event.preventDefault();
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const contact = document.getElementById('contact').value;
+      const message = document.getElementById('message').value;
+      
+      const subject = `Message from ${name}`;
+      const body = `Name: ${name}%0D%0AEmail: ${email}%0D%0AContact: ${contact}%0D%0A%0D%0AMessage:%0D%0A${message}`;
+      
+      window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=23010101132@darshan.ac.in&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`, '_blank');
+    }
+
+    function openContactForm() {
+      document.getElementById('contactModal').style.display = 'block';
+    }
+
+    function closeContactForm() {
+      document.getElementById('contactModal').style.display = 'none';
+    }
+
+    function sendEmail(event) {
+      event.preventDefault();
+      const name = document.getElementById('senderName').value;
+      const email = document.getElementById('senderEmail').value;
+      const message = document.getElementById('emailMessage').value;
+      
+      const mailtoLink = `mailto:23010101132@darshan.ac.in?subject=Message from ${name}&body=Name: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0AMessage:%0D%0A${message}`;
+      window.location.href = mailtoLink;
+      closeContactForm();
+    }
+
+    // Close modal when clicking outside
+    window.onclick = function(event) {
+      const modal = document.getElementById('contactModal');
+      if (event.target == modal) {
+        closeContactForm();
+      }
+    }
+  </script>
+</body>
+</html> 
